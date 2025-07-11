@@ -1,0 +1,157 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\1. Dev Project\\C#\\KuroNekoPlayServe\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{ECC5323B-6A49-4CD5-B7C9-B4D021630645}|KuroNekoPlayServe.csproj|d:\\1. dev project\\c#\\kuronekoplayserve\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ECC5323B-6A49-4CD5-B7C9-B4D021630645}|KuroNekoPlayServe.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ECC5323B-6A49-4CD5-B7C9-B4D021630645}|KuroNekoPlayServe.csproj|d:\\1. dev project\\c#\\kuronekoplayserve\\menus\\gamelistmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ECC5323B-6A49-4CD5-B7C9-B4D021630645}|KuroNekoPlayServe.csproj|solutionrelative:menus\\gamelistmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ECC5323B-6A49-4CD5-B7C9-B4D021630645}|KuroNekoPlayServe.csproj|d:\\1. dev project\\c#\\kuronekoplayserve\\menus\\servermenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ECC5323B-6A49-4CD5-B7C9-B4D021630645}|KuroNekoPlayServe.csproj|solutionrelative:menus\\servermenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ECC5323B-6A49-4CD5-B7C9-B4D021630645}|KuroNekoPlayServe.csproj|d:\\1. dev project\\c#\\kuronekoplayserve\\menus\\configmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ECC5323B-6A49-4CD5-B7C9-B4D021630645}|KuroNekoPlayServe.csproj|solutionrelative:menus\\configmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ECC5323B-6A49-4CD5-B7C9-B4D021630645}|KuroNekoPlayServe.csproj|d:\\1. dev project\\c#\\kuronekoplayserve\\menus\\imenuservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ECC5323B-6A49-4CD5-B7C9-B4D021630645}|KuroNekoPlayServe.csproj|solutionrelative:menus\\imenuservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ECC5323B-6A49-4CD5-B7C9-B4D021630645}|KuroNekoPlayServe.csproj|d:\\1. dev project\\c#\\kuronekoplayserve\\configs\\configloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ECC5323B-6A49-4CD5-B7C9-B4D021630645}|KuroNekoPlayServe.csproj|solutionrelative:configs\\configloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ECC5323B-6A49-4CD5-B7C9-B4D021630645}|KuroNekoPlayServe.csproj|d:\\1. dev project\\c#\\kuronekoplayserve\\kuronekoplayserve.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{ECC5323B-6A49-4CD5-B7C9-B4D021630645}|KuroNekoPlayServe.csproj|solutionrelative:kuronekoplayserve.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ECC5323B-6A49-4CD5-B7C9-B4D021630645}|KuroNekoPlayServe.csproj|d:\\1. dev project\\c#\\kuronekoplayserve\\utilities\\enumtext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ECC5323B-6A49-4CD5-B7C9-B4D021630645}|KuroNekoPlayServe.csproj|solutionrelative:utilities\\enumtext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "KuroNekoPlayServe",
+              "DocumentMoniker": "D:\\1. Dev Project\\C#\\KuroNekoPlayServe\\KuroNekoPlayServe.csproj",
+              "RelativeDocumentMoniker": "KuroNekoPlayServe.csproj",
+              "ToolTip": "D:\\1. Dev Project\\C#\\KuroNekoPlayServe\\KuroNekoPlayServe.csproj",
+              "RelativeToolTip": "KuroNekoPlayServe.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-07-09T07:48:00.189Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\1. Dev Project\\C#\\KuroNekoPlayServe\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\1. Dev Project\\C#\\KuroNekoPlayServe\\Program.cs*",
+              "RelativeToolTip": "Program.cs*",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAACUAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-09T07:22:49.171Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ServerMenu.cs",
+              "DocumentMoniker": "D:\\1. Dev Project\\C#\\KuroNekoPlayServe\\Menus\\ServerMenu.cs",
+              "RelativeDocumentMoniker": "Menus\\ServerMenu.cs",
+              "ToolTip": "D:\\1. Dev Project\\C#\\KuroNekoPlayServe\\Menus\\ServerMenu.cs",
+              "RelativeToolTip": "Menus\\ServerMenu.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-09T14:02:00.285Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IMenuService.cs",
+              "DocumentMoniker": "D:\\1. Dev Project\\C#\\KuroNekoPlayServe\\Menus\\IMenuService.cs",
+              "RelativeDocumentMoniker": "Menus\\IMenuService.cs",
+              "ToolTip": "D:\\1. Dev Project\\C#\\KuroNekoPlayServe\\Menus\\IMenuService.cs",
+              "RelativeToolTip": "Menus\\IMenuService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-09T13:48:56.123Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GameListMenu.cs",
+              "DocumentMoniker": "D:\\1. Dev Project\\C#\\KuroNekoPlayServe\\Menus\\GameListMenu.cs",
+              "RelativeDocumentMoniker": "Menus\\GameListMenu.cs",
+              "ToolTip": "D:\\1. Dev Project\\C#\\KuroNekoPlayServe\\Menus\\GameListMenu.cs",
+              "RelativeToolTip": "Menus\\GameListMenu.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-09T13:37:37.061Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ConfigMenu.cs",
+              "DocumentMoniker": "D:\\1. Dev Project\\C#\\KuroNekoPlayServe\\Menus\\ConfigMenu.cs",
+              "RelativeDocumentMoniker": "Menus\\ConfigMenu.cs",
+              "ToolTip": "D:\\1. Dev Project\\C#\\KuroNekoPlayServe\\Menus\\ConfigMenu.cs",
+              "RelativeToolTip": "Menus\\ConfigMenu.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAcAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-09T13:04:34.232Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ConfigLoader.cs",
+              "DocumentMoniker": "D:\\1. Dev Project\\C#\\KuroNekoPlayServe\\Configs\\ConfigLoader.cs",
+              "RelativeDocumentMoniker": "Configs\\ConfigLoader.cs",
+              "ToolTip": "D:\\1. Dev Project\\C#\\KuroNekoPlayServe\\Configs\\ConfigLoader.cs",
+              "RelativeToolTip": "Configs\\ConfigLoader.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-09T13:52:03.658Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "EnumText.cs",
+              "DocumentMoniker": "D:\\1. Dev Project\\C#\\KuroNekoPlayServe\\Utilities\\EnumText.cs",
+              "RelativeDocumentMoniker": "Utilities\\EnumText.cs",
+              "ToolTip": "D:\\1. Dev Project\\C#\\KuroNekoPlayServe\\Utilities\\EnumText.cs",
+              "RelativeToolTip": "Utilities\\EnumText.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAACwAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-09T09:22:51.737Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
