@@ -11,7 +11,14 @@
     <Title>KuroNekoPlayServe</Title>
     <NeutralLanguage>en-US</NeutralLanguage>
     <Company>Kuro_kitten</Company>
+    <Product>PlayServe</Product>
+    <ApplicationIcon>favicon.ico</ApplicationIcon>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="favicon.ico" />
+  </ItemGroup>
 
   <ItemGroup>
     <Using Include="System.Console">

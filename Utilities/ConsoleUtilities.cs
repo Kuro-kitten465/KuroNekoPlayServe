@@ -11,12 +11,5 @@ namespace Kuro.PlayServe.Utilities
             if (string.IsNullOrEmpty(input)) input = "";
             return input;
         }
-
-        public static void Exit()
-        {
-            WriteLine($"{NL}{BLUE}[{Operation.Message}]{NORMAL}{TABTAB}Press {GREEN}\"Enter\"{GREEN} to exit.");
-            ReadKey();
-            Environment.Exit(0);
-        }
     }
 }

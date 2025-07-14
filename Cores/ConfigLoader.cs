@@ -1,13 +1,12 @@
 ﻿using Kuro.PlayServe.Utilities;
 using static Kuro.PlayServe.Utilities.EnumTextFormat;
-using static Kuro.PlayServe.Utilities.ConsoleUtilities;
 
-namespace Kuro.PlayServe.Configs;
+namespace Kuro.PlayServe.Cores;
 
 public struct Configurations
 {
     public ushort Port { get; set; }
-    public string? GameFolder { get; set; }
+    public string GameFolder { get; set; }
     public bool AutoOpen { get; set; }
 }
 
@@ -45,21 +44,19 @@ public sealed class ConfigLoader(string configPath) : IDisposable
                     temp.GameFolder = parts[1];
 
                     if (string.IsNullOrEmpty(temp.GameFolder) || !Directory.Exists(temp.GameFolder))
-                        throw new FormatException();
+                        Directory.CreateDirectory(temp.GameFolder);
                 }
                 if (parts[0].Equals("AutoOpen")) temp.AutoOpen = Convert.ToBoolean(parts[1]);
             }
-            catch (FormatException)
+            catch (Exception)
             {
-                WriteLine($"{RED}[{Operation.Error}]{NORMAL}{TABTAB}{TAB}Can't load Config.txt file. Due to Format isn't right.");
-                WriteLine($"{BLUE}[{Operation.Message}]{NORMAL}{TABTAB}Pls try to remove the file or set a new value.");
-                Exit();
-            }
-            catch (OverflowException)
-            {
-                WriteLine($"{RED}[{Operation.Error}]{NORMAL}{TABTAB}{TAB}Can't load Config.txt file. Due to value isn't valid.");
-                WriteLine($"{BLUE}[{Operation.Message}]{NORMAL}{TABTAB}Pls try to remove the file or set a new value.");
-                Exit();
+                WriteLine($"{RED}[{Operation.Exception}]{NORMAL}{TABTAB}{TAB}Can't load Config.txt file. We will use default values instead.");
+
+                CreateNewConfig();
+
+                temp.Port = 8080;
+                temp.GameFolder = "Games";
+                temp.AutoOpen = true;
             }
         }
 

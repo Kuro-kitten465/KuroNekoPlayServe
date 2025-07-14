@@ -1,40 +1,37 @@
-﻿using Kuro.PlayServe.Configs;
-using Kuro.PlayServe.Menus;
-using static Kuro.PlayServe.Utilities.ConsoleUtilities;
+﻿using static Kuro.PlayServe.Utilities.ConsoleUtilities;
 using static Kuro.PlayServe.Utilities.OperationTextFormat;
 using static Kuro.PlayServe.Utilities.EnumTextFormat;
+using Kuro.PlayServe.Cores;
+using Kuro.PlayServe.Utilities;
 
 namespace Kuro.PlayServe;
 
-internal class Program
+internal static class Program
 {
-    private static bool _isRunning = false;
-    private static CancellationTokenSource _cts = new();
+    private static readonly Application _app = new();
+    private static readonly InputSystem _inputSystem = new();
 
-    private static Configurations _config = new();
-
-    private static IMenuService? _menuService { get; set; }
-
-    public static async Task Main(string[] args)
+    public static void Main()
     {
-        await Initialize();
+        ConsoleExtensions.EnableVirtualTerminalProcessing();
 
-        _menuService = new GameListMenu();
-        await _menuService.OpenMenu();
-        await Task.Delay(5000);
-        _menuService = new ServerMenu();
-        await _menuService.OpenMenu();
+        _inputSystem.ESCKeyPressed += () =>
+        {
+            _app.Stop();
+        };
 
+        _inputSystem.StartListening();
+
+        _app.Run();
+
+        Exit();
     }
 
-    public static void SetUpConfig(Configurations config) =>
-        _config = config;
-
-    private static async Task Initialize()
+    public static void Exit()
     {
-        _menuService = new ConfigMenu();
-        await _menuService.OpenMenu();
-
-        //Write(_config.AutoOpen.ToString() + _config.GameFolder + _config.Port);
+        Clear();
+        WriteLine($"{MESSAGE}Press {GREEN}\"Enter\"{GREEN} to exit.");
+        ReadKey();
+        Environment.Exit(0);
     }
 }

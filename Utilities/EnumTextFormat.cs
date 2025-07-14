@@ -29,7 +29,7 @@ public enum Operation // have no idea how to name this.
     User = 2,  // Cyan
     Message = 4, // Blue
     Warning = 8, // Yellow
-    Error = 16, // Red
+    Exception = 16, // Red
     Progress = 32, // Magenta
     Complete = 64 // Green
 }
@@ -40,7 +40,7 @@ public static class OperationTextFormat
     public static readonly string USER = $"{CYAN}[{Operation.User}]{NORMAL}{TABTAB}";
     public static readonly string MESSAGE = $"{BLUE}[{Operation.Message}]{NORMAL}{TABTAB}";
     public static readonly string WARNING = $"{YELLOW}[{Operation.Warning}]{NORMAL}{TABTAB}";
-    public static readonly string ERROR = $"{RED}[{Operation.Error}]{NORMAL} {TABTAB}";
+    public static readonly string EXCEPTION = $"{RED}[{Operation.Exception}]{NORMAL} {TABTAB}";
     public static readonly string PROGRESS = $"{MAGENTA}[{Operation.Progress}]{NORMAL} {TABTAB}";
     public static readonly string COMPLETE = $"{GREEN}[{Operation.Complete}]{NORMAL} {TABTAB}";
 }
