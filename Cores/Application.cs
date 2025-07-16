@@ -1,44 +1,86 @@
-﻿using Kuro.PlayServe.Menus;
+﻿using static Kuro.PlayServe.Utilities.OperationTextFormat;
+using static Kuro.PlayServe.Utilities.EnumTextFormat;
 
 namespace Kuro.PlayServe.Cores
 {
-    public class Application
+    internal class Application
     {
-        private readonly CancellationTokenSource _cts = new();
-        private readonly MenuManager _menuManager= new();
+        private static Server? _server;
+        public static bool IsRunning { get; private set; } = true;
 
-        private Configurations _configurations;
-
-        public static Configurations Configurations { get; private set; }
-
-        public void Run()
+        public static Configurations Config { get; private set; } = new Configurations
         {
-            while (!_cts.IsCancellationRequested)
-            {
-                try
-                {
-                    _menuManager.OnMenuClosed += SetupConfigurations;
-                    _menuManager.Open<ConfigMenu>().Wait();
-                    _menuManager.OnMenuClosed -= SetupConfigurations;
+            GameFolder = string.Empty,
+            Port = 8080,
+            AutoOpen = true
+        };
 
-                    _menuManager.Open<MainMenu>().Wait();
-                }
-                catch (Exception ex)
+        public static void Initialize()
+        {
+            Config = ConfigurationsManager.ConfigsLoader("Configs.txt");
+            WriteLine($"{NL}{COMPLETE}Configurations loaded!{NL}");
+            WriteLine($"{MESSAGE}GameFolder:{TAB}{GREEN}{Config.GameFolder}");
+            WriteLine($"{MESSAGE}Port:{TABTAB}{GREEN}{Config.Port}");
+            WriteLine($"{MESSAGE}AutoOpen:{TAB}{GREEN}{Config.AutoOpen}{NL}");
+
+            var gamePath = GameFinder();
+            if (string.IsNullOrEmpty(gamePath))
+            {
+                WriteLine($"{WARNING}No WebGL game found. Please place your game in the {Config.GameFolder} folder.");
+                return;
+            }
+
+            _server = new Server(Config.Port, gamePath);
+            _server.Start();
+
+            if (Config.AutoOpen)
+            {
+                System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo
                 {
-                    WriteLine($"An error occurred: {ex.Message}");
-                }
+                    FileName = $"http://localhost:{Config.Port}",
+                    UseShellExecute = true
+                });
             }
         }
 
-        private void SetupConfigurations(object obj)
+        public static void Shutdown()
         {
-            _configurations = (Configurations)obj;
-            Configurations = _configurations;
+            IsRunning = false;
+            _server?.Stop();
+            WriteLine($"{COMPLETE}Server stopped. Thank you for using KuroNekoPlayServe!");
+            WriteLine($"{COMPLETE}Press Enter to exit.");
+            ReadKey();
         }
 
-        public void Stop()
+        private static string GameFinder()
         {
-            _cts.Cancel();
+            if (!Directory.Exists(Config.GameFolder))
+            {
+                Directory.CreateDirectory(Config.GameFolder);
+                WriteLine($"{PROGRESS}Created game folder at {Config.GameFolder}");
+                return string.Empty;
+            }
+
+            WriteLine($"{PROGRESS}Searching for WebGL game...");
+            var indexFiles = Directory.GetFiles(Config.GameFolder, "index.html", SearchOption.AllDirectories);
+            
+            if (indexFiles.Length == 0)
+            {
+                WriteLine($"{WARNING}No index.html found in {Config.GameFolder}");
+                return string.Empty;
+            }
+
+            if (indexFiles.Length > 1)
+            {
+                WriteLine($"{WARNING}Multiple index.html files found. Using the first one:");
+                foreach (var file in indexFiles)
+                {
+                    WriteLine($"{PROGRESS}Found: {file}");
+                }
+            }
+
+            WriteLine($"{COMPLETE}Found game at: {Path.GetDirectoryName(indexFiles[0])}");
+            return Path.GetDirectoryName(indexFiles[0]) ?? string.Empty;
         }
     }
 }

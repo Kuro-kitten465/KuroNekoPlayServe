@@ -14,6 +14,23 @@
     <Product>PlayServe</Product>
     <ApplicationIcon>favicon.ico</ApplicationIcon>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Authors>Kuro_kitten</Authors>
+    <PackageIcon>d6555edb-99e2-4c8e-bc2f-233818c4f713.png</PackageIcon>
+    <RepositoryUrl>https://github.com/Kuro-kitten465/KuroNekoPlayServe</RepositoryUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageProjectUrl>https://github.com/Kuro-kitten465/KuroNekoPlayServe</PackageProjectUrl>
+    <Copyright>© 2025 Kuro_kitten, No rights reserved.</Copyright>
+    <Description>A minimal LocalHost for WebGL games.</Description>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageRequireLicenseAcceptance>False</PackageRequireLicenseAcceptance>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>portable</DebugType>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DebugType>portable</DebugType>
   </PropertyGroup>
 
   <ItemGroup>
@@ -21,9 +38,27 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="..\..\BA-ToSchool\d6555edb-99e2-4c8e-bc2f-233818c4f713.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
     <Using Include="System.Console">
       <Static>True</Static>
     </Using>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="LICENSE">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Update="README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>

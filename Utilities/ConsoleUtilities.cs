@@ -1,4 +1,5 @@
-﻿using static Kuro.PlayServe.Utilities.EnumTextFormat;
+﻿using static Kuro.PlayServe.Utilities.OperationTextFormat;
+using static Kuro.PlayServe.Utilities.EnumTextFormat;
 
 namespace Kuro.PlayServe.Utilities
 {
@@ -6,7 +7,8 @@ namespace Kuro.PlayServe.Utilities
     {
         public static string GetInput(string message)
         {
-            Write(message);
+            WriteLine($"{MESSAGE}{message}");
+            Write($"{USER}{TAB}");
             string? input = ReadLine();
             if (string.IsNullOrEmpty(input)) input = "";
             return input;
