@@ -10,3 +10,6 @@ A Minimal LocalHost for WebGL Game
 I have archive some WebGL games and you can download it from the link.
 [Google Drive](https://drive.google.com/drive/folders/1JZuU-U0yGM8feVsmGWBFYDxjWcprBNzH?usp=sharing)
 
+## How to Setup Guide
+https://youtu.be/f0AiFNf5RZA?si=jukddjUEg7tMbcS7
+
